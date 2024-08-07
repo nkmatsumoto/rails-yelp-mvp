@@ -1,0 +1,6 @@
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category, collection: Restaurant::CATEGORIES.sort, include_blank: false %>
+  <%= f.submit 'Submit', class: 'btn btn-info mt-2' %>
+<% end %>
